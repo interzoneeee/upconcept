@@ -1,0 +1,117 @@
+/* Animation utilities */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate-on-scroll.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for animations */
+.animate-on-scroll[style*="transition-delay: 100ms"],
+.animate-on-scroll.delay-100 {
+  transition-delay: 100ms;
+}
+
+.animate-on-scroll[style*="transition-delay: 200ms"],
+.animate-on-scroll.delay-200 {
+  transition-delay: 200ms;
+}
+
+.animate-on-scroll[style*="transition-delay: 300ms"],
+.animate-on-scroll.delay-300 {
+  transition-delay: 300ms;
+}
+
+.animate-on-scroll[style*="transition-delay: 400ms"],
+.animate-on-scroll.delay-400 {
+  transition-delay: 400ms;
+}
+
+.animate-on-scroll[style*="transition-delay: 500ms"],
+.animate-on-scroll.delay-500 {
+  transition-delay: 500ms;
+}
+
+/* Slide animations */
+.animate-on-scroll.translate-x-6 {
+  transform: translateX(24px);
+}
+
+.animate-on-scroll.-translate-x-6 {
+  transform: translateX(-24px);
+}
+
+.animate-on-scroll.translate-x-6.animate-visible,
+.animate-on-scroll.-translate-x-6.animate-visible {
+  transform: translateX(0);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(22, 128, 122, 0.2);
+  color: inherit;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #16807A;
+  outline-offset: 2px;
+}
+
+/* Button hover transitions */
+button,
+a {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Card hover effects */
+.hover-lift {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #f1f5f9;
+}
+
+/* Form input focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #16807A;
+  box-shadow: 0 0 0 3px rgba(22, 128, 122, 0.1);
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Print styles */
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}
